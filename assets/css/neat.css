@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+* {
+  margin: 0;    padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #ffffff;
+  font-family: 'Noto Serif', serif;
+  width: 100%;    height: 100vh;
+}
+header {
+  height: 10vh;
+  display: flex;
+  transition: 1s ease;
+  /* opacity: 0.7;*/
+}
+header .open-btn {
+  padding-left: 5%;
+  font-size: 40px;
+  width: 33.333%;
+}
+header .logo {
+  width: 33.333%;   height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+header .logo a{
+     text-decoration: none;
+     color: #ffffff;
+   }
+
+@keyframes animate {
+  from {transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+header .logo .circle::after {
+  position: absolute;
+  top: 10px;  right: 10px;  bottom: 10px; left: 10px;
+  background-color: black;
+  border-radius: 50%;
+  content: "";
+}
+header .logo .circle::after span{
+  position: absolute;
+  width: 100%;    height: 100%;
+  background-image: linear-gradient(180deg,#873B9C,#AE3387,#E43266);
+  border-radius: 50%;
+}
+header .logo .circle::after span:nth-child(1){
+  filter: #873B9C(5px);
+}
+header .logo .circle::after span:nth-child(2){
+  filter: #AE3387(10px);
+}
+header .logo .circle::after span:nth-child(3){
+  filter: #873B9C(20px);
+}
+header .logo .circle::after span:nth-child(4){
+  filter: #873B9C(55px);
+}
+header .search {
+  position: absolute;
+  top: 20px;    right: 50px;
+}
+header .search .search-box{
+  position: relative;
+}
+header .search .search-box .input{
+  width: 0px; height: 34px;
+  padding: 0px 10px;
+  visibility: hidden;
+  border-radius: 50px;
+  /* box-shadow: 0 0 3px 1px #333333; */
+  outline: none;
+  /* color: #333333; */
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn {
+  position: absolute;
+  top: 0px;   right: -1px;
+  background-color: #ffffff;
+  border: solid 1px #000222;
+  width: 34px;    height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn.changeBG {
+  background-image: linear-gradient(180deg,#873B9C,#AE3387,#E43266);
+  transition: all .2s ease;
+}
+header .search .search-box .search-btn .fas {
+  position: absolute;
+  top: 50%;   left: 50%;
+  transform: translate(-50%,-50%) ;
+  color: #000222;
+  font-size: 20px;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn .fas.ChangeSearchColor {
+  color: #ffffff;
+  transition: all 1s ease;
+}
+header .search .search-box .input.active-search-width {
+  width: 200px;
+  visibility: visible;
+  border: solid 1px #000222;
+}
+aside {
+  width: 0%; height: 100vh;
+  background-color: #000222;
+  position: fixed;
+  top: 0;   left: 0;
+  transition: 1s ease;
+  padding-top: 60px;
+  display: none;
+  transition: 1s ease;
+}
+aside nav {
+  width: 100%;  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+aside nav .close-btn {
+  font-size: 40px;
+  position: absolute;
+  right: 10%;    top: 0%;
+}
+aside nav a {
+  font-size: 20px;
+  display: block;
+  margin: 20px;
+  text-decoration: none;
+  transition: none;
+  opacity: .3;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+aside nav a:hover {
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+aside .social-box {
+  width: 100%;    height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.social-box .facebook {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #3B5998;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .teitter {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #00ACEE;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .google {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: tomato;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+
+.social-box .facebook:hover, .social-box .teitter:hover, .social-box .google:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+
+
+
+
+
+.animate-wrapper {
+  width: 100%;    height: 90vh;
+  position: relative;
+  margin: auto;
+}
+.slides {
+  display: block;
+  width: 100%;    height: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  animation: CHBack 2s ease ;
+}
+@keyframes CHBack {
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+.container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+.container .caption {
+  width: 30%;
+  margin-left: 100px;
+  position: absolute;
+  top: 30%;
+}
+.container .caption-R {
+  width: 30%;
+  margin-left: 100px;
+  position: absolute;
+  top: 30%;   right: 0;
+}
+.container .caption h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin: 0;
+  animation: captionText 1s ease forwards;
+}
+.container .caption-R h2 {
+  font-size: 42px;
+  color: #ffffff;
+  margin: 0;
+  animation: captionText-R 1s ease forwards;
+}
+.container .caption p {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 30px 30px;
+  animation: captionText 2s ease forwards;
+}
+.container .caption-R p {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 30px 30px;
+  animation: captionText-R 2s ease forwards;
+}
+.container .caption a {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 15px 30px;
+  background-color: #000222;
+  text-decoration: none;
+  color: #ffffff;
+  animation: captionText 3s ease forwards;
+}
+.container .caption-R a {
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 15px 30px;
+  background-color: #000222;
+  text-decoration: none;
+  color: #ffffff;
+  animation: captionText-R 3s ease forwards;
+}
+@keyframes captionText {
+  0%{opacity: .3;     transform: translateX(-100px);}
+  100%{opacity: 1;     transform: translateX(0px);}
+}
+@keyframes captionText-R {
+  0%{opacity: .3;     transform: translateX(-100px);}
+  100%{opacity: 1;     transform: translateX(0px);}
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  font-size: 50px;
+  padding: 16px;
+  margin-top: 2px;
+  color: #ffffff;
+  font-weight: bold;
+  transition: .6s ease ;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,8);
+}
+.next {
+  right: 0;
+}
+
+
+.P-wrapper {
+  height: 200vh; 
+  background-color: #000222;
+  position: relative;
+  transition: 1s ease;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4,1fr);
+  grid-template-areas: 
+  'Suits Suits Suits Suits'
+  'Shirts Shirts Shirts Shirts'
+  'ties ties ties ties'
+  'shoes shoes shoes shoes';
+}
+
+.Suits-con {
+  grid-area: Suits;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: 
+  'suits-des suits-des suits-img suits-img';
+}
+.Suits-con .suitsDes{
+  grid-area: suits-des;
+  background-color: white;
+}
+.Suits-con .suitsIMG{
+  grid-area: suits-img;
+}
+
+
+
+.Shirts-con {
+  grid-area: Shirts;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: 
+  'shirts-img shirts-img shirts-des shirts-des';
+}
+.Shirts-con .shirtsIMG{
+  grid-area: shirts-img;
+}
+.Shirts-con .shirtsDes{
+  grid-area: shirts-des;
+  background-color: white;
+}
+
+
+.Ties-con {
+  grid-area: ties;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: 
+  'ties-des ties-des ties-img ties-img';
+}
+.Ties-con .tiesDes{
+  grid-area: ties-des;
+  background-color: white;
+}
+.Ties-con .tiesIMG{
+  grid-area: ties-img;
+}
+
+
+.Shoes-con {
+  grid-area: shoes;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1,1fr);
+  grid-template-areas: 
+  'shoes-img shoes-img shoes-des shoes-des';
+}
+.Shoes-con .shoesIMG{
+  grid-area: shoes-img;
+}
+.Shoes-con .shoesDes{
+  grid-area: shoes-des;
+  background-color: white;
+}
+
+
+
+
+.beforeAniamte {
+  visibility: hidden;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+.animating{
+  visibility: visible;
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+  animation-fill-mode: both;
+  animation-duration: 3s;
+}
+.animating.translateDY {
+  animation-name: translateDY;
+}
+@keyframes translateDY{
+  0%{opacity: 0; 
+      transform:translateY(1000px);
+      -webkit-transform: translateY(1000px);
+      }
+  100%{opacity: 1; 
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+} 
+
+
+
+
+
+
+
+@media only screen and (max-width:768px) {
+  .container .caption {
+    width: 60%;
+    margin-left: 10px;
+    position: absolute;
+    top: 30%;
+  }
+  .container .caption-R {
+    width: 60%;
+    margin-left: 10px;
+    position: absolute;
+    top: 30%;   right: 0;
+  }
+
+}
+@media only screen and (max-width:375px)  {
+  .Suits-con {
+    grid-area: Suits;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    'suits-img suits-img suits-img suits-img'
+    'suits-img suits-img suits-img suits-img'
+    'suits-des suits-des suits-des suits-des';
+  }
+  .Shirts-con {
+    grid-area: Shirts;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    'shirts-img shirts-img shirts-img shirts-img'
+    'shirts-img shirts-img shirts-img shirts-img'
+    'shirts-des shirts-des shirts-des shirts-des';
+  }
+  .Ties-con {
+    grid-area: ties;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    'ties-img ties-img ties-img ties-img'
+    'ties-img ties-img ties-img ties-img'
+    'ties-des ties-des ties-des ties-des';
+  }
+  .Shoes-con {
+    grid-area: shoes;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    'shoes-img shoes-img shoes-img shoes-img'
+    'shoes-img shoes-img shoes-img shoes-img'
+    'shoes-des shoes-des shoes-des shoes-des';
+  }
+}
+

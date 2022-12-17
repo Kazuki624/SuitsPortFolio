@@ -1,0 +1,751 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+* {
+  margin: 0;    padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #ffffff;
+  font-family: 'Noto Serif', serif;
+  width: 100%;    height: 100vh;
+}
+header {
+  height: 10vh;
+  display: flex;
+  transition: 1s ease;
+  /* opacity: 0.7;*/
+}
+header .open-btn {
+  padding-left: 5%;
+  font-size: 40px;
+  width: 33.333%;
+}
+header .logo {
+  width: 33.333%;   height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+header .logo a{
+     text-decoration: none;
+     color: #ffffff;
+   }
+
+@keyframes animate {
+  from {transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+header .logo .circle::after {
+  position: absolute;
+  top: 10px;  right: 10px;  bottom: 10px; left: 10px;
+  background-color: black;
+  border-radius: 50%;
+  content: "";
+}
+header .logo .circle::after span{
+  position: absolute;
+  width: 100%;    height: 100%;
+  background-image: linear-gradient(180deg,#873B9C,#AE3387,#E43266);
+  border-radius: 50%;
+}
+header .logo .circle::after span:nth-child(1){
+  filter: #873B9C(5px);
+}
+header .logo .circle::after span:nth-child(2){
+  filter: #AE3387(10px);
+}
+header .logo .circle::after span:nth-child(3){
+  filter: #873B9C(20px);
+}
+header .logo .circle::after span:nth-child(4){
+  filter: #873B9C(55px);
+}
+header .search {
+  position: absolute;
+  top: 20px;    right: 50px;
+}
+header .search .search-box{
+  position: relative;
+}
+header .search .search-box .input{
+  width: 0px; height: 34px;
+  padding: 0px 10px;
+  visibility: hidden;
+  border-radius: 50px;
+  /* box-shadow: 0 0 3px 1px #333333; */
+  outline: none;
+  /* color: #333333; */
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn {
+  position: absolute;
+  top: 0px;   right: -1px;
+  background-color: #ffffff;
+  border: solid 1px #000222;
+  width: 34px;    height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn.changeBG {
+  background-image: linear-gradient(180deg,#873B9C,#AE3387,#E43266);
+  transition: all .2s ease;
+}
+header .search .search-box .search-btn .fas {
+  position: absolute;
+  top: 50%;   left: 50%;
+  transform: translate(-50%,-50%) ;
+  color: #000222;
+  font-size: 20px;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn .fas.ChangeSearchColor {
+  color: #ffffff;
+  transition: all 1s ease;
+}
+header .search .search-box .input.active-search-width {
+  width: 200px;
+  visibility: visible;
+  border: solid 1px #000222;
+}
+aside {
+  width: 0%; height: 100vh;
+  background-color: #000222;
+  position: fixed;
+  top: 0;   left: 0;
+  transition: 1s ease;
+  padding-top: 60px;
+  display: none;
+  transition: 1s ease;
+}
+aside nav {
+  width: 100%;  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+aside nav .close-btn {
+  font-size: 40px;
+  position: absolute;
+  right: 10%;    top: 0%;
+}
+aside nav a {
+  font-size: 20px;
+  display: block;
+  margin: 20px;
+  text-decoration: none;
+  transition: none;
+  opacity: .3;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+aside nav a:hover {
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+aside .social-box {
+  width: 100%;    height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.social-box .facebook {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #3B5998;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .teitter {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #00ACEE;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .google {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: tomato;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+
+.social-box .facebook:hover, .social-box .teitter:hover, .social-box .google:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+
+
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%; 
+}
+.video {
+  width: 100%;    height: 100%;
+  position: relative;
+}
+.video video{
+  width: 100%;    height: 100%;
+}
+.video .video-text{
+  width: 50%;
+  position: absolute;
+  top: 30%;  right: 10%;
+}
+.video .video-text h3{
+  opacity: 0;
+  animation: appear 4s ;
+  animation-delay: 6s;
+  animation-fill-mode: forwards;
+  font-size: 50px;  
+  margin: 10px 5px;
+}
+@keyframes appear {
+  0% { transform: scale(0); opacity: 0;}
+  100% { transform: scale(1); opacity: 1;}
+}
+@keyframes appear2 {
+  0% { transform: scale(0);}
+  80% { transform: scale(1.1);  opacity: .8;}
+  100% { transform: scale(1);  opacity: 1;}
+}
+
+/* main .later {
+  background-color: #ffffff;
+  position: absolute;
+  top: 0; left: 0;
+  animation-name: latter ;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-delay: 9s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.later .later-text {
+  width: 60%;   height: 50%;
+  background-color: aqua;
+  display: none;
+}
+@keyframes latter {
+  0% {transform: scale(0);  width: 0%; height: 0%; }
+  50% {transform: scale(0);  width: 100%; height: 5%;}
+  100% {transform: scale(1);  width: 100%;  height: 100%;}
+} */
+
+
+
+
+
+
+
+main section:nth-child(2) {
+  width: 100%; height: 50vh;
+  display: flex;
+  background-color: #ffffff;
+}
+main .image-Box {
+  width: 50%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .image-Box img{
+  width: 75%; height: 75%;
+  border: 1PX solid #000222;
+}
+main .info-1{
+  width: 50%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .info-1 h2{
+  font-size: 52px; color: #000222;
+}
+main .info-1 p{
+  font-size: 30px;  color: #000222;
+}
+
+
+
+
+main section:nth-child(3) {
+  width: 100%; height:100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.principle {
+  display: flex;
+  width: 75%;    height: 100%;
+}
+.principle .P-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;    height: 100%;
+}
+.P-text .topic1, .P-text .topic2, .P-text .topic3{
+  width: 75%;   
+  color: #000222;
+}
+.topic1 .number1, .topic2 .number2,.topic3 .number3{
+  font-size: 28px; 
+  margin: 30px 
+}
+.topic1 .strategy1, .topic2 .strategy2,.topic3 .strategy3{
+  font-size: 28px; 
+  margin: 30px 5px;
+}
+.topic1 p, .topic2 p,.topic3 p{
+  margin: 10px 10px 30px 0 ; 
+  font-size: 16px;
+}
+
+
+
+.principle .graph{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;    height: 100%;
+}
+.box1, .box2, .box3 {
+  width: 150px; height: 150px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,.6);
+  margin: 30px 0;
+  transition: 2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1 {
+  transform: translateY(180px) skew(10deg,10deg) rotate(45deg) perspective(1000px);
+}
+.box2 {
+  transform: translateY(-10px)  skew(10deg,10deg) rotate(45deg) perspective(1000px);
+}
+.box3 {
+  transform: translateY(-180px)  skew(10deg,10deg) rotate(45deg) perspective(1000px);
+}
+.principle .graph:hover .box1 {
+  transform: translateY(20px) ;
+}
+.principle .graph:hover .box2 {
+  transform: translateY(0px);
+}
+.principle .graph:hover .box3 {
+  transform: translateY(-20px);
+}
+
+main section:nth-child(4) {
+  width: 100%;    height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service {
+  width: 70%;    height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.service .service-text{
+  width: 100%;    height: 30%;
+}
+.service .service-text h2{
+  font-size: 52px; 
+  margin: 20px 30px 10px 30px; 
+  color: #000222;
+}
+.service .service-text p{
+  font-size: 24px; 
+  margin: 10px 30px 10px 30px; 
+  color: #ACABB7;
+}
+.service .service-procedure{
+  width: 100%;    height: 20%;
+}
+.service .service-procedure .process{
+  width: 100%;    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.process .ability{
+  width: 33%;
+  height: 100%;
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.process .ability i{
+  font-size: 90px;
+  background-color: #ffffff;
+}
+.Requirement  {
+  width: 100%;    height: 50%;
+  display: flex;
+}
+.Requirement .call,  .Requirement .manufacture, .Requirement .worker{
+  width: 33.333%;    height: 100%;
+  text-align: center;
+}
+.Requirement .call h3,  .Requirement .manufacture h3 , .Requirement .worker h3{
+  font-size: 32px; 
+  margin: 10px 5px;
+  color: #000222;
+}
+.Requirement li {
+  list-style: none;
+  margin: 15px 0;
+  font-size: 20px;
+  color: #000222;
+}
+
+
+main section:nth-child(5) {
+  width: 100%;    height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.beforeAnimate {
+  visibility: hidden;
+  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+}
+.animating {
+  visibility: visible;
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+  animation-fill-mode: both;
+  animation-duration: 2s;
+}
+.animating.animationDelay {
+  animation-delay: 1.2s;
+}
+.animating.bounceIn {
+  animation-name: bounceIn;
+}
+/* .animating.TranslateU {
+  animation-name: TranslateU;
+} */
+@keyframes bounceIn {
+  0% {opacity: 0;
+      transform: scale(.3);
+  }
+  100% {opacity: 1;
+      transform: scale(1);
+  }
+}
+
+
+/* 
+.topic1 p{
+  overflow: hidden;
+  border-right: 5px solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; 
+}
+@keyframes typing {
+  from {width: 0;}
+  to {width: 100%;}
+}
+@keyframes blink-caret {
+  from,to  {border-color: transparent;}
+  50% {border-color: white;}
+}
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media only screen and (max-width:768px) {
+  .video {
+    width: 100%;    height: 50%;
+    position: relative;
+  }
+  .video .video-text h3{
+    font-size: 24px;  
+  }
+  main section:nth-child(2) {
+    width: 100%; height: 50vh;
+    display: flex;
+    background-color: #ffffff;
+  }
+  main .image-Box {
+    width: 50%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .image-Box img{
+    width: 75%; height: 75%;
+    border: 1PX solid #000222;
+  }
+  main .info-1{
+    width: 50%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  main .info-1 h2{
+    font-size: 30px; color: #000222;
+  }
+  main .info-1 p{
+    font-size: 16px;  color: #000222;
+  }
+
+  .principle {
+  display: flex;
+  width: 100%;    height: 100%;
+  }
+  .P-text .topic1, .P-text .topic2, .P-text .topic3{
+    width: 80%;   
+    color: #000222;
+  }
+  .box1, .box2, .box3 {
+    width: 100px; height: 100px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.6);
+  }
+  .principle .graph .box1 {
+    transform: translateY(20px) ;
+  }
+  .principle .graph .box2 {
+    transform: translateY(0px);
+  }
+  .principle .graph .box3 {
+    transform: translateY(-20px);
+  }
+  .topic1 .number1, .topic2 .number2,.topic3 .number3{
+    font-size: 20px; 
+    margin: 10px 
+  }
+  .topic1 .strategy1, .topic2 .strategy2,.topic3 .strategy3{
+    font-size: 20px; 
+    margin: 10px 5px;
+  }
+  .topic1 p, .topic2 p,.topic3 p{
+    margin: 10px 10px 10px 0 ; 
+    font-size: 16px;
+  }
+  main section:nth-child(4) {
+    width: 100%;    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .service {
+    width: 70%;    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .service .service-text{
+    width: 100%;    height: 30%;
+  }
+  .service .service-procedure{
+    width: 100%;    height: 20%;
+  }
+  .service .service-procedure .process{
+    width: 100%;    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .process .ability{
+    width: 33%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .process .ability i{
+    font-size: 90px;
+    background-color: #ffffff;
+  }
+  .Requirement  {
+    width: 100%;    height: 50%;
+    display: flex;
+  }
+  .Requirement .call,  .Requirement .manufacture, .Requirement .worker{
+    width: 33.333%;    height: 100%;
+    text-align: center;
+  }
+  .Requirement .call h3,  .Requirement .manufacture h3 , .Requirement .worker h3{
+    font-size: 32px; margin: 10px 5px;
+  }
+  .Requirement li {
+    list-style: none;
+    margin: 15px 0;
+    font-size: 20px;
+    color: #000222;
+  }
+
+
+
+
+
+
+
+
+}
+@media only screen and (max-width:375px)  {
+  .P-text .topic1, .P-text .topic2, .P-text .topic3{
+    width: 90%;   
+  }
+  .box1, .box2, .box3 {
+    width: 50px; height: 50px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,.6);
+    transition: 2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .principle .graph .box1 {
+    transform: translateY(0px) ;
+  }
+  .principle .graph .box2 {
+    transform: translateY(0px);
+  }
+  .principle .graph .box3 {
+    transform: translateY(0px);
+  }
+  .topic1 .number1, .topic2 .number2,.topic3 .number3{
+    font-size: 12px; 
+    margin: 5px;
+  }
+  .topic1 .strategy1, .topic2 .strategy2,.topic3 .strategy3{
+    font-size: 16px; 
+    margin:  5px;
+  }
+  .topic1 p, .topic2 p,.topic3 p{
+    margin: 5px; 
+    font-size: 12px;
+  }
+
+
+  .service {
+    width:  100%;    height: 100%;
+  }
+  .service .service-text{
+    width: 100%;    height: 30%;
+  }
+  .service .service-text h2{
+    font-size: 30px; 
+    margin: 5px 10px 10px 10px; 
+    color: #000222;
+  }
+  .service .service-text p{
+    font-size: 15px; 
+    margin: 5px 10px 10px 10px; 
+    color: #ACABB7;
+  }
+
+
+  .service .service-procedure{
+    width: 100%;    height: 20%;
+    /* background-color: cadetblue; */
+  }
+  .service .service-procedure .process{
+    width: 100%;    height: 100%;
+    display: flex;
+  }
+  .process .ability{
+    width: 33%;
+    height: 100%;
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .process .ability i{
+    font-size: 60px;
+    background-color: #ffffff;
+  }
+
+  .Requirement  {
+    width: 100%;    height: 50%;
+    display: flex;
+  }
+  .Requirement .call,  .Requirement .manufacture, .Requirement .worker{
+    width: 33.333%;    height: 100%;
+    text-align: center;
+  }
+  .Requirement .call h3,  .Requirement .manufacture h3 , .Requirement .worker h3{
+    font-size: 20px; margin: 0px 0px;
+  }
+  .Requirement li {
+    list-style: none;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #000222;
+  }
+
+
+}
+

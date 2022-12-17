@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUITS</title>
+  <link rel="stylesheet" href="../assets/css/suits.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body style="background-color: #000222;">
+  <header id="header">
+    <span class="open-btn"><a onclick="Open()">&#9776; </a></span>
+    <span class="logo">
+     <a href="../index.html">
+          <h1>KK CO.</h1>
+     </a>
+    </span>
+
+    <div class="search">
+      <div class="search-box">
+        <input type="text" class="input">
+        <div class="search-btn"><i class="fas fa-search"></i></div>
+
+      </div>
+    </div>
+  </header>
+  <aside id="NavBar">
+    <nav>
+      <a class="close-btn" onclick="Close()">&times;</a>
+      <a href="./about.html">About</a>
+      <a href="./neat.html">Neat</a>
+      <a href="./contact.html">Contact</a>        
+      <h3>All Rigths Reserve Kazuki</h3>
+    </nav>
+    <section class="social-box">
+        <button class="facebook"><i class="fab fa-facebook-square" style="font-size: 36px; color: #ffffff;" ></i></button>
+        <button class="teitter"><i class="fab fa-twitter-square" style="font-size: 36px; color: #ffffff;"></i></button>
+        <button class="google"><i class="fab fa-google-plus-square" style="font-size: 36px; color: #ffffff;"></i></button>
+    </section>
+  </aside>
+  <main id="main">
+    <section class="wrapper">
+      <article class="Single" style="background-image: url('../assets/images/suits/single_ph001.jpg'); background-size: cover;" >
+        <div class="Caption">
+          <h2>Single Suits</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolore tempora eum ex corrupti distinctio neque accusantium omnis vitae architecto, beatae atque inventore totam quis commodi ducimus quod facilis. Officiis?</p>
+          <button class="btn" onclick="ViewSingle()">View Product</button>
+        </div>
+      </article>
+      <article class="Single-Back" id="SingleBack">
+        <div class="SimplePro">
+            <div class="row-left">
+              <div class="display">
+                  <img src="../assets/images/suits/single_ph002.jpg" id="Display">
+              </div>
+            </div>
+            <div class="row-right">
+              <div class="title">
+                <h3>Suits</h3>
+                <h2>Single Black Suit</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reprehenderit nisi id, numquam minus reiciendis culpa soluta velit officia magni.</p>
+              </div>
+              <div class="option">
+                <h3>Colors</h3>
+                    <img src="../assets/images/suits/single_ph002.jpg" onclick="Black()">
+                    <img src="../assets/images/suits/single_ph003.jpg" onclick="Navy()">
+                    <img src="../assets/images/suits/single_ph004.jpg" onclick="DarkBlack()">
+                    <img src="../assets/images/suits/single_ph005.jpg" onclick="Navy2()">
+                <h3>Sizes</h3>
+                    <button class="size">36</button>
+                    <button class="size">37</button>
+                    <button class="size">38</button>
+                    <button class="size">39</button>
+                    <button class="size">40</button>
+                    <button class="size">41</button>
+                    <button class="size">42</button>
+              </div>
+              <div class="price">
+                <h4>$1000.00</h4>
+                <i class="fas fa-shopping-cart">Cart</i>
+                <i class="fas fa-times" onclick="CloseSingle()"></i>
+              </div>
+            </div>
+        </div>
+      </article>
+      <article class="Double"  style="background-image: url('../assets/images/suits/double_ph001.jpg'); background-size: cover;" >
+        <div class="Caption">
+          <h2>Double Suits</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolore tempora eum ex corrupti distinctio neque accusantium omnis vitae architecto, beatae atque inventore totam quis commodi ducimus quod facilis. Officiis?</p>
+          <button class="btn" onclick="ViewDouble()">View Product</button>
+        </div>
+      </article>
+      <article class="Double-Back" id="DoubleBack">
+        <div class="DoublePro">
+          <div class="row-left">
+            <div class="display">
+                <img src="../assets/images/suits/single_ph002.jpg" id="Display2">
+            </div>
+          </div>
+          <div class="row-right">
+            <div class="title">
+              <h3>Suits</h3>
+              <h2>Double Black Suit</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima reprehenderit nisi id, numquam minus reiciendis culpa soluta velit officia magni.</p>
+            </div>
+            <div class="option">
+              <h3>Colors</h3>
+                  <img src="../assets/images/suits/single_ph002.jpg" onclick="DBlack()">
+                  <img src="../assets/images/suits/single_ph003.jpg" onclick="DNavy()">
+                  <img src="../assets/images/suits/single_ph004.jpg" onclick="DDarkBlack()">
+                  <img src="../assets/images/suits/single_ph005.jpg" onclick="DNavy2()">
+              <h3>Sizes</h3>
+                  <button class="size">36</button>
+                  <button class="size">37</button>
+                  <button class="size">38</button>
+                  <button class="size">39</button>
+                  <button class="size">40</button>
+                  <button class="size">41</button>
+                  <button class="size">42</button>
+            </div>
+            <div class="price">
+              <h4>$1200.00</h4>
+              <i class="fas fa-shopping-cart">Cart</i>
+              <i class="fas fa-times" onclick="CloseDouble()"></i>
+            </div>
+        </div>
+      </article>
+    </section> 
+  </main>
+  <script src="../assets/js/suits.js"></script>
+
+</body>
+</html>

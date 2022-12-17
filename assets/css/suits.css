@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+* {
+  margin: 0;    padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #ffffff;
+  font-family: 'Noto Serif', serif;
+  width: 100%;    height: 100vh;
+}
+header {
+  height: 10vh;
+  display: flex;
+  transition: 1s ease;
+  /* opacity: 0.7;*/
+}
+header .open-btn {
+  padding-left: 5%;
+  font-size: 40px;
+  width: 33.333%;
+}
+header .logo {
+  width: 33.333%;   height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+header .logo a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header .search {
+  position: absolute;
+  top: 20px;    right: 50px;
+}
+header .search .search-box{
+  position: relative;
+}
+header .search .search-box .input{
+  width: 0px; height: 34px;
+  padding: 0px 10px;
+  visibility: hidden;
+  border-radius: 50px;
+  /* box-shadow: 0 0 3px 1px #333333; */
+  outline: none;
+  /* color: #333333; */
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn {
+  position: absolute;
+  top: 0px;   right: -1px;
+  background-color: #ffffff;
+  border: solid 1px #000222;
+  width: 34px;    height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn.changeBG {
+  background-image: linear-gradient(180deg,#873B9C,#AE3387,#E43266);
+  transition: all .2s ease;
+}
+header .search .search-box .search-btn .fas {
+  position: absolute;
+  top: 50%;   left: 50%;
+  transform: translate(-50%,-50%) ;
+  color: #000222;
+  font-size: 20px;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn .fas.ChangeSearchColor {
+  color: #ffffff;
+  transition: all 1s ease;
+}
+header .search .search-box .input.active-search-width {
+  width: 200px;
+  visibility: visible;
+  border: solid 1px #000222;
+}
+aside {
+  width: 0%; height: 100vh;
+  background-color: #000222;
+  position: fixed;
+  top: 0;   left: 0;
+  transition: 1s ease;
+  padding-top: 60px;
+  display: none;
+  transition: 1s ease;
+}
+aside nav {
+  width: 100%;  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+aside nav .close-btn {
+  font-size: 40px;
+  position: absolute;
+  right: 10%;    top: 0%;
+}
+aside nav a {
+  font-size: 20px;
+  display: block;
+  margin: 20px;
+  text-decoration: none;
+  transition: none;
+  opacity: .3;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+aside nav a:hover {
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+aside .social-box {
+  width: 100%;    height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.social-box .facebook {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #3B5998;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .teitter {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #00ACEE;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .google {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: tomato;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+
+.social-box .facebook:hover, .social-box .teitter:hover, .social-box .google:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+
+
+main {
+  width: 100%;  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.wrapper {
+  height: 90%; width: 90%;
+  position: relative;
+  transition: 1s ease;
+  display: flex;
+}
+.Single, .Double {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 2s;
+}
+.Single:hover, .Double:hover {
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  filter: grayscale(0);
+}
+.Single:hover .Caption, .Double:hover .Caption{
+  opacity: 1;
+}
+.Caption {
+  width: 80%;
+  background-color: rgba(0,0,0,.6);
+  margin-top: 300px;
+  opacity: 0;
+  transition: all 2s;
+}
+.Caption h2{
+  font-size: 40px;
+}
+.Caption p{
+  font-size: 16px;
+  margin: 10px 0px 10px 20px;
+}
+.Caption .btn{
+  font-size: 16px;
+  margin: 10px 0px 10px 20px;
+  padding: 10px ;
+  background-color: #000222;
+  border: none;
+  color: #ffffff;
+}
+
+main .Single-Back, main .Double-Back {
+  background-color: rgba(0,0,0,.6);
+  width: 100%;    height: 100%;
+  position: fixed;
+  top: 0;   left: 0;
+  display: none;
+  transition: 1s ease;
+}
+.Single-Back .SimplePro, .Double-Back .DoublePro{
+  background-color:#ffffff ;
+  width: 90%;   height: 80%;
+  color: #000;
+  display: flex;
+  position: relative;
+}
+.SimplePro .row-left,.SimplePro .row-right,.DoublePro .row-left, .DoublePro .row-right{
+  width: 50%;   height: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.row-left .display{
+  width: 90%;   height: 80%;
+}
+.row-left .display img{
+  width: 100%;   height: 100%;
+}
+.row-right .title{
+  width: 95%;   height: 30%;
+}
+.row-right .option{
+  width: 95%;   height: 50%;
+}
+.row-right .option img{
+  width: 100px;   height: 120px;
+  margin: 10px 10px 10px;
+}
+.row-right .price{
+  width: 95%;   height: 20%;
+  /* display: flex; */
+}
+.row-right h3{
+  margin: 10px 0 10px 10px;
+  font-size: 24px;
+  color: #757171;
+}
+.row-right h2{
+  margin: 10px 0 10px 10px;
+  font-size: 36px;
+  color: #000000;
+}
+.row-right h4{
+  margin: 10px 0 10px 10px;
+  font-size: 24px;
+  color: #000000;
+}
+.row-right p{
+  margin: 10px 10px 10px 10px;
+  font-size: 16px;
+  color: #000000;
+}
+.row-right i{
+  margin: 10px 10px 10px 50px;
+  font-size: 30px;
+  color: #000000;
+}
+.row-right button{
+  margin: 10px 10px 10px;
+  font-size: 20px;
+  color: #000000;
+  text-align: center;
+  padding: 0 5px;
+}
+.row-right .changeButton{
+  background-color: green;
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width:768px) {
+  .wrapper {
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    'single'
+    'dble';
+  }
+  .Single, .Double {
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+  }
+  .Caption {
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    opacity: 1;
+    transition: all 2s;
+  }
+  .Caption p{
+    font-size: 12px;
+    margin: 5px 0px 0px 5px;
+  }
+  .Single-Back .SimplePro, .Double-Back .DoublePro{
+    background-color:#ffffff ;
+    width: 90%;   height: 100%;
+    color: #000;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+  }
+  .SimplePro .row-left,.SimplePro .row-right,.DoublePro .row-left, .DoublePro .row-right{
+    width: 100%;   height: 50%; 
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+  }
+  .row-left .display{
+    width: 90%;   height: 100%;
+  }
+  .row-left .display img{
+    width: 100%;   height: 100%;
+  }
+  .row-right .title{
+    width: 100%;   height: 20%;
+    /* background-color: red; */
+  } 
+  .row-right h3{
+    margin: 5px 0 5px 5px;
+    font-size: 16px;
+    color: #757171;
+  }
+  .row-right h2{
+    margin: 5px 0 5px 5px;
+    font-size: 24px;
+    color: #000000;
+  }
+  .row-right p{
+    display: none;
+  }
+
+
+
+  .row-right .option{
+    width: 100%;   height: 50%;
+    /* background-color: blueviolet; */
+  }
+  .row-right .option img{
+    width: 30px;   height: 50px;
+    margin: 10px 10px 10px;
+  }
+  .row-right button{
+    margin: 5px 5px 5px;
+    font-size: 12px;
+    color: #000000;
+    text-align: center;
+    padding: 0 5px;
+  }
+
+
+
+  .row-right .price{
+    width: 100%;   height: 30%;
+    /* background-color: rosybrown; */
+  }
+}
+@media only screen and (max-width:375px)  {
+
+}
+

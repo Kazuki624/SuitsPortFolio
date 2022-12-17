@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shirts</title>
+  <link rel="stylesheet" href="../assets/css/shirts.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body style="background-color: #000222;">
+  <header id="header">
+    <span class="open-btn"><a onclick="Open()">&#9776; </a></span>
+    <span class="logo">
+     <a href="../index.html">
+          <h1>KK CO.</h1>
+     </a>
+    </span>
+
+    <div class="search">
+     <div class="search-box">
+       <input type="text" class="input">
+       <div class="search-btn"><i class="fas fa-search"></i></div>
+
+     </div>
+   </div>
+  </header>
+  <aside id="NavBar">
+    <nav>
+      <a class="close-btn" onclick="Close()">&times;</a>
+      <a href="./about.html">About</a>
+      <a href="./neat.html">Neat</a>
+      <a href="./contact.html">Contact</a>        
+      <h3>All Rigths Reserve Kazuki</h3>
+    </nav>
+    <section class="social-box">
+        <button class="facebook"><i class="fab fa-facebook-square" style="font-size: 36px; color: #ffffff;" ></i></button>
+        <button class="teitter"><i class="fab fa-twitter-square" style="font-size: 36px; color: #ffffff;"></i></button>
+        <button class="google"><i class="fab fa-google-plus-square" style="font-size: 36px; color: #ffffff;"></i></button>
+    </section>
+  </aside>
+  <main id="main">
+    <section>
+      <article class="Box1">
+          <img src="../assets/images/shirts/category_001/shirts_ph001.jpg" onclick="ProDetail()"> 
+      </article>
+      <section id="ProDetail" class="BackImage">
+            <article class="Pro-img">
+                <img src="../assets/images/shirts/category_001/shirts_ph001.jpg" id="ProImG">
+            </article>
+            <article class="Pro-Detail">
+              <div class="title1">
+                <h5>lorem</h5>
+                <h3>Dress Shirts</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+              </div>
+              <div class="option">
+                <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                    <div class="Color-option">
+                      <button style="background: #ffffff;" onclick="color1()"></button>
+                      <button style="background: #b2abab;" onclick="color2()"></button>
+                      <button style="background: #ccfaff;" onclick="color3()"></button>
+                      <button style="background: #1d3c6d;" onclick="color4()"></button>
+                      <button style="background: #000000;" onclick="color5()"></button>
+                    </div>
+                <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                    <div class="size-option">
+                        <button>XS</button>
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                        <button>XS</button>
+                    </div>
+              </div>
+              <br>
+              <hr style="width: 100%;">
+              <div class="price">
+                <span style="font-size: 40px; margin: 5px 0 5px 10px;">$99.8</span>
+                <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+                <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro()"></i>
+              </div>
+            </article>
+      </section>
+
+      <article class="Box2">
+          <img src="../assets/images/shirts/category_002/shirts_ph001.jpg" onclick="ProDetail2()">
+      </article>
+      <section id="ProDetail2" class="BackImage">
+        <article class="Pro-img">
+            <img src="../assets/images/shirts/category_002/shirts_ph001.jpg" id="ProImG2">
+        </article>
+        <article class="Pro-Detail">
+          <div class="title2">
+            <h5>lorem</h5>
+            <h3>Slim Shirts</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <div class="option">
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                <div class="Color-option">
+                  <button style="background: #ffffff;" onclick="color1S()"></button>
+                  <button style="background: #ccfaff;" onclick="color2S()"></button>
+                </div>
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                <div class="size-option">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+          </div>
+          <br>
+          <hr style="width: 100%;">
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$102.8</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro2()"></i>
+          </div>
+        </article>
+      </section>
+
+      <article class="Box3">
+        <img src="../assets/images/shirts/category_003/shirts_ph001.jpg" onclick="ProDetail3()">
+      </article>
+      <section id="ProDetail3" class="BackImage">
+        <article class="Pro-img">
+            <img src="../assets/images/shirts/category_003/shirts_ph001.jpg" id="ProImG3">
+        </article>
+        <article class="Pro-Detail">
+          <div class="title3">
+            <h5>lorem</h5>
+            <h3>Contrast Oxford Shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="option">
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                <div class="Color-option">
+                  <button style="background: #ccfaff;" onclick="color1TH()"></button>
+                  <button style="background: #ffffff;" onclick="color2TH()"></button>
+                </div>
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                <div class="size-option">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+          </div>
+          <br>
+          <hr style="width: 100%;">
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$148.8</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro3()"></i>
+          </div>
+        </article>
+      </section>
+
+
+
+      <article class="Box4">
+        <img src="../assets/images/shirts/category_004/shirts_ph001.jpg" onclick="ProDetail4()">
+      </article>
+      <section id="ProDetail4" class="BackImage">
+        <article class="Pro-img">
+            <img src="../assets/images/shirts/category_004/shirts_ph001.jpg" id="ProImG4">
+        </article>
+        <article class="Pro-Detail">
+          <div class="title4">
+            <h5>lorem</h5>
+            <h3>City Shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <div class="option">
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                <div class="Color-option">
+                  <button style="background: #000000;" onclick="color1F()"></button>
+                  <button style="background: #ffffff;" onclick="color2F()"></button>
+                  <button style="background: #ccfaff;" onclick="color3F()"></button>
+                </div>
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                <div class="size-option">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+          </div>
+          <br>
+          <hr style="width: 100%;">
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$79.8</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro4()"></i>
+          </div>
+        </article>
+      </section>
+
+      <article class="Box5">
+        <img src="../assets/images/shirts/category_005/shirts_ph001.jpg" onclick="ProDetail5()">
+      </article>
+      <section id="ProDetail5" class="BackImage">
+        <article class="Pro-img">
+            <img src="../assets/images/shirts/category_005/shirts_ph001.jpg" id="ProImG5">
+        </article>
+        <article class="Pro-Detail">
+          <div class="title5">
+            <h5>lorem</h5>
+            <h3>Tailored Fit Business Shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis.</p>
+          </div>
+          <div class="option">
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                <div class="Color-option">
+                  <button style="background: #000000;" onclick="color1FI()"></button>
+                  <button style="background: #ffffff;" onclick="color2FI()"></button>
+                  <button style="background: #ccfaff;" onclick="color3FI()"></button>
+                </div>
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                <div class="size-option">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+          </div>
+          <br>
+          <hr style="width: 100%;">
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$120.8</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro5()"></i>
+          </div>
+        </article>
+      </section>
+
+
+
+      <article class="Box6">
+        <img src="../assets/images/shirts/category_006/shirts_ph001.jpg" onclick="ProDetail6()">
+      </article>
+      <section id="ProDetail6" class="BackImage">
+        <article class="Pro-img">
+            <img src="../assets/images/shirts/category_006/shirts_ph001.jpg" id="ProImG6">
+        </article>
+        <article class="Pro-Detail">
+          <div class="title6">
+            <h5>lorem</h5>
+            <h3>Tailored Fit Business Shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis.</p>
+          </div>
+          <div class="option">
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                <div class="Color-option">
+                  <button style="background: #ffffff;" onclick="color1SIX()"></button>
+                  <button style="background: #b2abab;" onclick="color2SIX()"></button>
+                  <button style="background: #ccfaff;" onclick="color3SIX()"></button>
+                  <button style="background: #1d3c6d;" onclick="color4SIX()"></button>
+                  <button style="background: #000000;" onclick="color5SIX()"></button>
+                </div>
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                <div class="size-option">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+          </div>
+          <br>
+          <hr style="width: 100%;">
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$120.8</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro6()"></i>
+          </div>
+        </article>
+      </section>
+
+
+      <article class="Box7">
+        <img src="../assets/images/shirts/category_007/shirts_ph001.jpg" onclick="ProDetail7()">
+      </article>
+      <section id="ProDetail7" class="BackImage">
+        <article class="Pro-img">
+            <img src="../assets/images/shirts/category_007/shirts_ph001.jpg" id="ProImG7">
+        </article>
+        <article class="Pro-Detail">
+          <div class="title7">
+            <h5>lorem</h5>
+            <h3>Slim Fit Business Shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis.</p>
+          </div>
+          <div class="option">
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                <div class="Color-option">
+                  <button style="background: #000000;" onclick="color1SE()"></button>
+                  <button style="background: #ffffff;" onclick="color2SE()"></button>
+                  <button style="background: #ccfaff;" onclick="color3SE()"></button>
+                </div>
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                <div class="size-option">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+          </div>
+          <br>
+          <hr style="width: 100%;">
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$120.8</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro7()"></i>
+          </div>
+        </article>
+      </section>
+
+      <article class="Box8">
+        <img src="../assets/images/shirts/category_008/shirts_ph001.jpg" onclick="ProDetail8()">
+      </article>
+      <section id="ProDetail8" class="BackImage">
+        <article class="Pro-img">
+            <img src="../assets/images/shirts/category_008/shirts_ph001.jpg" id="ProImG8">
+        </article>
+        <article class="Pro-Detail">
+          <div class="title8">
+            <h5>lorem</h5>
+            <h3>Check Shirt</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis.</p>
+          </div>
+          <div class="option">
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                <div class="Color-option">
+                  <button style="background: #ccfaff;" onclick="color1EI()"></button>
+                </div>
+            <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Size:</h4>
+                <div class="size-option">
+                    <button>XS</button>
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+          </div>
+          <br>
+          <hr style="width: 100%;">
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$120.8</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="ClosePro8()"></i>
+          </div>
+        </article>
+      </section>
+
+
+
+    </section>
+  </main>
+
+
+
+
+
+  <script src="../assets/js/shirts.js"></script>
+</body>
+</html>

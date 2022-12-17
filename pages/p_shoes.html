@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes</title>
+  <link rel="stylesheet" href="../assets/css/shoes.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body style="background-color: #000222;">
+  <header id="header">
+    <span class="open-btn"><a onclick="Open()">&#9776; </a></span>
+    <span class="logo">
+     <a href="../index.html">
+          <h1>KK CO.</h1>
+     </a>
+    </span>
+
+    <div class="search">
+      <div class="search-box">
+        <input type="text" class="input">
+        <div class="search-btn"><i class="fas fa-search"></i></div>
+
+      </div>
+    </div>
+  </header>
+  <aside id="NavBar">
+    <nav>
+      <a class="close-btn" onclick="Close()">&times;</a>
+      <a href="About.html">About</a>
+      <a href="neat.html">Neat</a>
+      <a href="contact.html">Contact</a>        
+      <h3>All Rigths Reserve Kazuki</h3>
+    </nav>
+    <section class="social-box">
+        <button class="facebook"><i class="fab fa-facebook-square" style="font-size: 36px; color: #ffffff;" ></i></button>
+        <button class="teitter"><i class="fab fa-twitter-square" style="font-size: 36px; color: #ffffff;"></i></button>
+        <button class="google"><i class="fab fa-google-plus-square" style="font-size: 36px; color: #ffffff;"></i></button>
+    </section>
+  </aside>
+  <main id="main">
+    <section>
+      <article class="Box1" style="background-image: url(../assets/images/shoes/category_001/shoes_ph001.jpg); background-size: cover; background-position: center;">
+        <div class="Box1-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Kensington</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open1()">Read more</button>
+        </div>
+      </article>
+      <article id="Box1Modulo" class="BackImage1">
+        <div class="Box1-image">
+          <img src="../assets/images/shoes/category_001/shoes_ph001.jpg" id="Kensington" style="width: 100%;  height: 100%;">
+        </div>
+        <div class="Box1-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Kensington</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option1">
+              <div class="Size-option1">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option1">
+                <button><img src="../assets/images/shoes/category_001/shoes_ph001.jpg" onclick="Kensington1()" ></button>
+                <button><img src="../assets/images/shoes/category_001/shoes_ph002.jpg" onclick="Kensington2()"></button>
+                <button><img src="../assets/images/shoes/category_001/shoes_ph003.jpg" onclick="Kensington3()"></button>
+              </div>
+            
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$450.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close1()"></i>
+        </div>
+        </div>
+      </article>
+
+
+
+
+
+      <article class="Box2" style="background-image: url(../assets/images/shoes/category_002/shoes_ph001.jpeg); background-size: cover; background-position: center;">
+        <div class="Box2-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Brahms</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open2()">Read more</button>
+        </div>
+      </article>
+      <article id="Box2Modulo" class="BackImage2">
+        <div class="Box2-image">
+          <img src="../assets/images/shoes/category_002/shoes_ph001.jpeg" id="Brahms" style="width: 100%; height: 100%;">
+        </div>
+        <div class="Box2-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Brahms</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option2">
+              <div class="Size-option2">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option2">
+                <button><img src="../assets/images/shoes/category_002/shoes_ph001.jpeg" onclick="Brahms1()" ></button>
+                <button><img src="../assets/images/shoes/category_002/shoes_ph002.jpeg" onclick="Brahms2()" ></button>
+                <button><img src="../assets/images/shoes/category_002/shoes_ph003.jpeg" onclick="Brahms3()" ></button>
+              </div>
+        </div>
+        <div class="price">
+          <span style="font-size: 40px; margin: 5px 0 5px 10px;">$590.00</span>
+          <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+          <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close2()"></i>
+      </div>
+        </div>
+      </article>
+
+
+
+
+
+
+      <article class="Box3" style="background-image: url(../assets/images/shoes/category_003/shoes_ph001.jpeg); background-size: cover; background-position: center;">
+        <div class="Box3-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Chelsea</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open3()">Read more</button>
+        </div>
+      </article>
+      <article id="Box3Modulo" class="BackImage3">
+        <div class="Box3-image">
+          <img src="../assets/images/shoes/category_003/shoes_ph001.jpeg" id="Chelsea" style="width: 100%; height: 100%;">
+        </div>
+        <div class="Box3-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Chelsea</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div> 
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option3">
+              <div class="Size-option3">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option3">
+                <button><img src="../assets/images/shoes/category_003/shoes_ph001.jpeg" onclick="Chelsea1()" ></button>
+                <button><img src="../assets/images/shoes/category_003/shoes_ph002.jpeg" onclick="Chelsea2()" ></button>
+                <button><img src="../assets/images/shoes/category_003/shoes_ph003.jpeg" onclick="Chelsea3()" ></button>
+              </div>
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$410.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close3()"></i>
+        </div>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+      <article class="Box4" style="background-image: url(../assets/images/shoes/category_004/shoes_ph001.jpeg); background-size: cover; background-position: center;">
+        <div class="Box4-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Chopin</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open4()">Read more</button>
+        </div>
+      </article>
+      <article id="Box4Modulo" class="BackImage4">
+        <div class="Box4-image">
+          <img src="../assets/images/shoes/category_004/shoes_ph001.jpeg" id="Chopin" style="width: 100%;  height: 100%;">
+        </div>
+        <div class="Box4-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Chopin</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option4">
+              <div class="Size-option4">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option4">
+                <button><img src="../assets/images/shoes/category_004/shoes_ph001.jpeg" onclick="Chopin1()" ></button>
+                <button><img src="../assets/images/shoes/category_004/shoes_ph002.jpeg" onclick="Chopin2()" ></button>
+                <button><img src="../assets/images/shoes/category_004/shoes_ph003.jpeg" onclick="Chopin3()" ></button>
+              </div>
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$425.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close4()"></i>
+        </div>
+        </div>
+      </article>
+
+
+
+
+
+
+
+      <article class="Box5" style="background-image: url(../assets/images/shoes/category_005/shoes_ph001.jpeg); background-size: cover; background-position: center;">
+        <div class="Box5-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Lobi</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open5()">Read more</button>
+        </div>
+      </article>
+      <article id="Box5Modulo" class="BackImage5">
+        <div class="Box5-image">
+          <img src="../assets/images/shoes/category_005/shoes_ph001.jpeg" id="Lodi" style="width: 100%;  height: 100%;">
+        </div>
+        <div class="Box5-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Lobi</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option5">
+              <div class="Size-option5">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option5">
+                <button><img src="../assets/images/shoes/category_005/shoes_ph001.jpeg" onclick="Lodi1()" ></button>
+                <button><img src="../assets/images/shoes/category_005/shoes_ph002.jpeg" onclick="Lodi2()" ></button>
+                <button><img src="../assets/images/shoes/category_005/shoes_ph003.jpeg" onclick="Lodi3()" ></button>
+              </div>
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$445.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close5()"></i>
+        </div>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+      <article class="Box6" style="background-image: url(../assets/images/shoes/category_006/shoes_ph001.jpeg); background-size: cover; background-position: center;">
+        <div class="Box6-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Oscar</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open6()">Read more</button>
+        </div>
+      </article>
+      <article id="Box6Modulo" class="BackImage6">
+        <div class="Box6-image">
+          <img src="../assets/images/shoes/category_006/shoes_ph001.jpeg" id="Oscar" style="width: 100%;  height: 100%;">
+        </div>
+        <div class="Box6-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Oscar</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option6">
+              <div class="Size-option6">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option6">
+                <button><img src="../assets/images/shoes/category_006/shoes_ph001.jpeg" onclick="Oscar1()" ></button>
+                <button><img src="../assets/images/shoes/category_006/shoes_ph002.jpeg" onclick="Oscar2()" ></button>
+                <button><img src="../assets/images/shoes/category_006/shoes_ph003.jpeg" onclick="Oscar3()" ></button>
+              </div>
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$499.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close6()"></i>
+        </div>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+
+      <article class="Box7" style="background-image: url(../assets/images/shoes/category_007/shoes_ph001.jpeg); background-size: cover; background-position: center;">
+        <div class="Box7-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Schubert</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open7()">Read more</button>
+        </div>
+      </article>
+      <article id="Box7Modulo" class="BackImage7">
+        <div class="Box7-image">
+          <img src="../assets/images/shoes/category_007/shoes_ph001.jpeg" id="Schubert" style="width: 100%;  height: 100%;">
+        </div>
+        <div class="Box7-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Schubert</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option7">
+              <div class="Size-option7">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option7">
+                <button><img src="../assets/images/shoes/category_007/shoes_ph001.jpeg" onclick="Schubert1()" ></button>
+                <button><img src="../assets/images/shoes/category_007/shoes_ph002.jpeg" onclick="Schubert2()" ></button>
+                <button><img src="../assets/images/shoes/category_007/shoes_ph003.jpeg" onclick="Schubert3()" ></button>
+              </div>
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$430.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close7()"></i>
+          </div>
+        </div>
+      </article>
+
+
+
+
+
+
+      <article class="Box8" style="background-image: url(../assets/images/shoes/category_008/shoes_ph001.jpeg); background-size: cover; background-position: center;">
+        <div class="Box8-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Vivaldi</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open8()">Read more</button>
+        </div>
+      </article>
+      <article id="Box8Modulo" class="BackImage8">
+        <div class="Box8-image">
+          <img src="../assets/images/shoes/category_008/shoes_ph001.jpeg" id="Vivaldi" style="width: 100%;  height: 100%;">
+        </div>
+        <div class="Box8-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Vivaldi</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option8">
+              <div class="Size-option8">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option8">
+                <button><img src="../assets/images/shoes/category_008/shoes_ph001.jpeg" onclick="Vivaldi1()" ></button>
+                <button><img src="../assets/images/shoes/category_008/shoes_ph002.jpeg" onclick="Vivaldi2()" ></button>
+                <button><img src="../assets/images/shoes/category_008/shoes_ph003.jpeg" onclick="Vivaldi3()" ></button>
+              </div>
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$450.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close8()"></i>
+          </div>
+        </div>
+      </article>
+
+
+
+
+
+
+
+      <article class="Box9" style="background-image: url(../assets/images/shoes/category_009/shoes_ph001.jpg); background-size: cover; background-position: center;">
+        <div class="Box9-Instraction">
+          <h3 style="font-size: 24px; margin: 10px 0;">Westminster</h3>
+          <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="Open9()">Read more</button>
+        </div>
+      </article>
+      <article id="Box9Modulo" class="BackImage9">
+        <div class="Box9-image">
+          <img src="../assets/images/shoes/category_009/shoes_ph001.jpg" id="Westminster" style="width: 100%;  height: 100%;">
+        </div>
+        <div class="Box9-detail">
+          <div class="title">
+            <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+            <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Westminster</h3>
+            <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+          </div>
+          <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Sizes:</h4>
+          <div class="option9">
+              <div class="Size-option9">
+                <button>8</button>
+                <button>8.5</button>
+                <button>9</button>
+                <button>9.5</button>
+                <button>10</button>
+                <button>10.5</button>
+                <button>11</button>
+              </div>
+              <div class="image-option9">
+                <button><img src="../assets/images/shoes/category_009/shoes_ph001.jpg" onclick="Westminster1()" ></button>
+                <button><img src="../assets/images/shoes/category_009/shoes_ph002.jpg" onclick="Westminster2()" ></button>
+                <button><img src="../assets/images/shoes/category_009/shoes_ph003.jpg" onclick="Westminster3()" ></button>
+              </div>
+          </div>
+          <div class="price">
+            <span style="font-size: 40px; margin: 5px 0 5px 10px;">$465.00</span>
+            <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+            <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="Close9()"></i>
+          </div>
+        </div>
+      </article>
+
+
+
+
+
+
+
+
+
+    </section>
+  </main>
+
+
+
+
+  <script src="../assets/js/shoes.js"></script>
+</body>
+</html>

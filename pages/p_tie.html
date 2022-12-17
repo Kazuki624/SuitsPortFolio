@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ties Product</title>
+  <link rel="stylesheet" href="../assets/css/tie.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body style="background-color: #000222;">
+  <header id="header">
+    <span class="open-btn"><a onclick="Open()">&#9776; </a></span>
+    <span class="logo">
+     <a href="../index.html">
+          <h1>KK CO.</h1>
+     </a>
+    </span>
+
+    <div class="search">
+      <div class="search-box">
+        <input type="text" class="input">
+        <div class="search-btn"><i class="fas fa-search"></i></div>
+
+      </div>
+    </div>
+  </header>
+  <aside id="NavBar">
+    <nav>
+      <a class="close-btn" onclick="Close()">&times;</a>
+      <a href="About.html">About</a>
+      <a href="neat.html">Neat</a>
+      <a href="contact.html">Contact</a>        
+      <h3>All Rigths Reserve Kazuki</h3>
+    </nav>
+    <section class="social-box">
+        <button class="facebook"><i class="fab fa-facebook-square" style="font-size: 36px; color: #ffffff;" ></i></button>
+        <button class="teitter"><i class="fab fa-twitter-square" style="font-size: 36px; color: #ffffff;"></i></button>
+        <button class="google"><i class="fab fa-google-plus-square" style="font-size: 36px; color: #ffffff;"></i></button>
+    </section>
+  </aside>
+  <main id="main">
+    <section class="Jacouard">
+        <article class="J-card" style="background-image: url(../assets/images/tie/category_001/tie_ph001.jpg); background-size: cover;" >
+          <div class="J-Instraction">
+            <h3 style="font-size: 24px; margin: 10px 0;">Jacouard Tie</h3>
+            <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="OpenJ()">Read more</button>
+          </div>
+        </article>
+        <article id="JDetail" class="BackImage">
+          <div class="JP-image">
+              <img src="../assets/images/tie/category_002/tie_ph001.jpg" id="jaimg" style="width: 100%; height: 100%;">
+          </div>
+          <div class="JP-Detail">
+            <div class="title">
+              <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+              <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Jacouard Ties</h3>
+              <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+            </div>
+            <div class="option">
+                <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                  <div class="Color-option-J">
+                    <button style="background: #236eba;" onclick="colorJ1()"></button>
+                    <button style="background: #3b8bdb;" onclick="colorJ2()"></button>
+                    <button style="background: #0377a5;" onclick="colorJ3()"></button>
+                    <button style="background: #022f66;" onclick="colorJ4()"></button>
+                  </div>
+            </div>
+            <br>
+            <hr style="width: 100%;">
+            <div class="price">
+              <span style="font-size: 40px; margin: 5px 0 5px 10px;">$130.00</span>
+              <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+              <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="CloseJ()"></i>
+          </div>
+        </article>    
+    </section>
+
+
+
+
+    
+    <section class="narrow">
+        <article class="N-card" style="background-image: url(../assets/images/tie/category_001/tie_ph002.jpg); background-size: cover;" >
+          <div class="N-Instraction">
+            <h3 style="font-size: 24px; margin: 10px 0;">Narrow Tie</h3>
+            <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="OpenN()">Read more</button>
+          </div>
+        </article>
+        <article id="NDetail" class="BackImage">
+          <div class="NP-image">
+            <img src="../assets/images/tie/category_003/tie_ph001.jpg" id="naimg" style="width: 100%; height: 100%;">
+          </div>
+          <div class="NP-Detail">
+            <div class="title">
+              <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+              <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Narrow Ties</h3>
+              <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+            </div>
+            <div class="option">
+                <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                  <div class="Color-option-N">
+                    <button style="background: #000000;" onclick="colorN1()"></button>
+                    <button style="background: #b2abab;" onclick="colorN2()"></button>
+                    <button style="background: #ff5656;" onclick="colorN3()"></button>
+                    <button style="background: #ff1616;" onclick="colorN4()"></button>
+                    <button style="background: #aaeeff;" onclick="colorN5()"></button>
+                  </div>
+            </div>
+            <br>
+            <hr style="width: 100%;">
+            <div class="price">
+              <span style="font-size: 40px; margin: 5px 0 5px 10px;">$18.8</span>
+              <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+              <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="CloseN()"></i>
+          </div>
+        </article>  
+    </section>
+
+
+
+
+
+
+    <section class="linen">
+        <article class="L-card" style="background-image: url(../assets/images/tie/category_001/tie_ph003.jpg); background-size: cover;">
+          <div class="L-Instraction">
+            <h3 style="font-size: 24px; margin: 10px 0;">Linen Tie</h3>
+            <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="OpenL()">Read more</button>
+          </div>
+        </article>
+        <article id="LDetail" class="BackImage">
+          <div class="LP-image">       
+            <img src="../assets/images/tie/category_004/tie_ph001.jpg" id="liimg" style="width: 100%; height: 100%;">
+          </div>
+          <div class="LP-Detail">
+            <div class="title">
+              <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+              <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Linen Ties</h3>
+              <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+            </div>
+            <div class="option">
+                <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+                  <div class="Color-option-L">
+                    <button style="background: #002177;" onclick="colorL1()"></button>
+                    <button style="background: #a1a2a3;" onclick="colorL2()"></button>
+                    <button style="background: #e0c17d;" onclick="colorL3()"></button>
+                    <button style="background: #6a9b42;" onclick="colorL4()"></button>
+                  </div>
+            </div>
+            <br>
+            <hr style="width: 100%;">
+            <div class="price">
+              <span style="font-size: 40px; margin: 5px 0 5px 10px;">$23</span>
+              <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+              <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="CloseL()"></i>
+          </div>
+        </article>  
+    </section>
+
+
+
+
+
+    <section class="wool">
+        <article class="W-card" style="background-image: url(../assets/images/tie/category_001/tie_ph004.jpg); background-size: cover;">
+          <div class="W-Instraction">
+            <h3 style="font-size: 24px; margin: 10px 0;">Wool Tie</h3>
+            <button style="font-size: 16px; padding: 3px 5px; margin: 10px 0; background: #000222; color: #ffffff; border-radius: 5px;" onclick="OpenW()">Read more</button>
+          </div>
+        </article>
+        <article id="WDetail" class="BackImage">
+          <div class="WP-image">
+            <img src="../assets/images/tie/category_005/tie_ph001.jpg" id="woimg" style="width: 100%; height: 100%;">
+          </div>
+          <div class="WP-Detail">
+            <div class="title">
+              <h5 style="font-size: 28px; margin: 5px 0 5px 10px;">lorem</h5>
+              <h3 style="font-size: 44px; margin: 5px 0 5px 10px;">Wool Ties</h3>
+              <p style="font-size: 16px; margin: 5px 0 5px 10px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at error officiis perspiciatis assumenda temporibus eum aut, a molestias hic ipsam impedit, eius quibusdam eligendi alias.</p>
+            </div>
+            <div class="option">
+              <h4 style="font-size: 20px; margin: 20px 0 5px 10px;">Colors:</h4>
+              <div class="Color-option-W">
+                <button style="background: #000000;" onclick="colorW1()"></button>
+                <button style="background: #5ac403;" onclick="colorW2()"></button>
+                <button style="background: #b7001b;" onclick="colorW3()"></button>
+                <button style="background: #934404;" onclick="colorW4()"></button>
+                <button style="background: #005bcc;" onclick="colorW5()"></button>
+                <button style="background: #afb2b5;" onclick="colorW6()"></button>
+                <button style="background: #5a5c5e;" onclick="colorW7()"></button>
+                <button style="background: #02244f;" onclick="colorW8()"></button>
+              </div>
+            </div>
+            <br>
+            <hr style="width: 100%;">
+            <div class="price">
+              <span style="font-size: 40px; margin: 5px 0 5px 10px;">$23.8</span>
+              <button style="background: #000000; color: #ffffff; font-size: 24px; margin: 0px 5px 5px 20px; padding: 0 10px;">Add to Cart</button>
+              <i class="fas fa-times" style="margin-left: 30px; font-size: 24px;" onclick="CloseW()"></i>
+            </div>
+        </article>  
+    </section>
+  </main>
+  <script src="../assets/js/tie.js"></script>
+</body>
+</html>

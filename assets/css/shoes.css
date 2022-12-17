@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif&display=swap');
+* {
+  margin: 0;    padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #ffffff;
+  font-family: 'Noto Serif', serif;
+  width: 100%;    height: 100vh;
+}
+header {
+  height: 10vh;
+  display: flex;
+  transition: 1s ease;
+  /* opacity: 0.7;*/
+}
+header .open-btn {
+  padding-left: 5%;
+  font-size: 40px;
+  width: 33.333%;
+}
+header .logo {
+  width: 33.333%;   height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+header .logo a{
+  text-decoration: none;
+  color: #fff;
+}
+
+@keyframes animate {
+  from {transform: rotate(0deg);}
+  to { transform: rotate(360deg);}
+}
+header .logo .circle::after {
+  position: absolute;
+  top: 10px;  right: 10px;  bottom: 10px; left: 10px;
+  background-color: black;
+  border-radius: 50%;
+  content: "";
+}
+header .logo .circle::after span{
+  position: absolute;
+  width: 100%;    height: 100%;
+  background-image: linear-gradient(180deg,#873B9C,#AE3387,#E43266);
+  border-radius: 50%;
+}
+header .logo .circle::after span:nth-child(1){
+  filter: #873B9C(5px);
+}
+header .logo .circle::after span:nth-child(2){
+  filter: #AE3387(10px);
+}
+header .logo .circle::after span:nth-child(3){
+  filter: #873B9C(20px);
+}
+header .logo .circle::after span:nth-child(4){
+  filter: #873B9C(55px);
+}
+header .search {
+  position: absolute;
+  top: 20px;    right: 50px;
+}
+header .search .search-box{
+  position: relative;
+}
+header .search .search-box .input{
+  width: 0px; height: 34px;
+  padding: 0px 10px;
+  visibility: hidden;
+  border-radius: 50px;
+  /* box-shadow: 0 0 3px 1px #333333; */
+  outline: none;
+  /* color: #333333; */
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn {
+  position: absolute;
+  top: 0px;   right: -1px;
+  background-color: #ffffff;
+  border: solid 1px #000222;
+  width: 34px;    height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn.changeBG {
+  background-image: linear-gradient(180deg,#873B9C,#AE3387,#E43266);
+  transition: all .2s ease;
+}
+header .search .search-box .search-btn .fas {
+  position: absolute;
+  top: 50%;   left: 50%;
+  transform: translate(-50%,-50%) ;
+  color: #000222;
+  font-size: 20px;
+  transition: all 1s linear;
+}
+header .search .search-box .search-btn .fas.ChangeSearchColor {
+  color: #ffffff;
+  transition: all 1s ease;
+}
+header .search .search-box .input.active-search-width {
+  width: 200px;
+  visibility: visible;
+  border: solid 1px #000222;
+}
+aside {
+  width: 0%; height: 100vh;
+  background-color: #000222;
+  position: fixed;
+  top: 0;   left: 0;
+  transition: 1s ease;
+  padding-top: 60px;
+  display: none;
+  transition: 1s ease;
+}
+aside nav {
+  width: 100%;  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+aside nav .close-btn {
+  font-size: 40px;
+  position: absolute;
+  right: 10%;    top: 0%;
+}
+aside nav a {
+  font-size: 20px;
+  display: block;
+  margin: 20px;
+  text-decoration: none;
+  transition: none;
+  opacity: .3;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+@-webkit-keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+aside nav a:hover {
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+  -webkit-mask-size: 200%;
+  animation: shine 2s infinite;
+}
+
+aside .social-box {
+  width: 100%;    height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.social-box .facebook {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #3B5998;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .teitter {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #00ACEE;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+.social-box .google {
+  width: 75px;  height: 75px;
+  border: 2px dashed #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  background-color: tomato;
+  transition: .5s ease;
+  margin: 5px 0;
+}
+
+.social-box .facebook:hover, .social-box .teitter:hover, .social-box .google:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+
+main {
+  width: 100%;    height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section {
+  width: 90%;  height: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3,1fr);
+  grid-template-areas: 
+  'Box1 Box2 Box3'
+  'Box4 Box5 Box6 '
+  'Box7 Box8 Box9 ';
+}
+.Box1, .Box2, .Box3, .Box4, .Box5, .Box6, .Box7, .Box8, .Box9, .Box10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: .5s ease;
+  border: 5px solid #000222;
+  border-radius: 25px;
+}
+.Box1:hover, .Box2:hover, .Box3:hover, .Box4:hover, .Box5:hover, .Box6:hover, .Box7:hover, .Box8:hover, .Box9:hover, .Box10:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+}
+.Box1:hover .Box1-Instraction, .Box2:hover .Box2-Instraction, .Box3:hover .Box3-Instraction, .Box4:hover .Box4-Instraction, .Box5:hover .Box5-Instraction, .Box6:hover .Box6-Instraction, .Box7:hover .Box7-Instraction, .Box8:hover .Box8-Instraction, .Box9:hover .Box9-Instraction{
+
+  opacity: 1;
+}
+.Box1-Instraction,  .Box2-Instraction,  .Box3-Instraction,  .Box4-Instraction,  .Box5-Instraction,  .Box6-Instraction,  .Box7-Instraction,  
+.Box8-Instraction,  .Box9-Instraction{
+  position: absolute;
+  top: 10%;   right: 10%;
+  color: #000;
+  opacity: 0;
+  transition: 1s ease;
+}
+/* .Box1-Instraction:hover,  .Box2-Instraction:hover,  .Box3-Instraction:hover,  .Box4-Instraction:hover,  .Box5-Instraction:hover,  .Box6-Instraction:hover,  .Box7-Instraction:hover,  
+.Box8-Instraction:hover,  .Box9-Instraction:hover{
+  position: absolute;
+  top: 20%;   right: 20%;
+  color: #000;
+  opacity: 1;
+} */
+
+.BackImage1, .BackImage2, .BackImage3, .BackImage4, .BackImage5,.BackImage6, .BackImage7, .BackImage8, .BackImage9, .BackImage10{
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;      height: 100vh;
+  position: fixed;
+  top: 0;     left: 0;
+  display: none;
+  transition: .6s ease;
+}
+
+.Box1-image, .Box2-image, .Box3-image, .Box4-image, .Box5-image, .Box6-image, .Box7-image, .Box8-image, .Box9-image, .Box10-image{
+  width: 50%;   height: 50%;
+  background-color: aliceblue;
+  display: block;
+}
+
+.Box1-detail, .Box2-detail, .Box3-detail, .Box4-detail, .Box5-detail, .Box6-detail, .Box7-detail, .Box8-detail, .Box9-detail, .Box10-detail{
+  width: 50%;   height: 50%;
+  background-color: #ffffff;
+  color: #000222;
+}
+
+.Size-option1,  .Size-option2, .Size-option3, .Size-option4, .Size-option5, .Size-option6, .Size-option7, .Size-option8, .Size-option9  {
+  display: flex;
+  margin: 5px 0 5px 10px;
+}
+.option1, .option2, .option3,  .option4, .option5, .option6, .option7, .option8, .option9{
+  display: flex;
+}
+
+.Size-option1 button, .Size-option2 button, .Size-option3 button, .Size-option4 button, .Size-option5 button, .Size-option6 button, .Size-option7 button, .Size-option8 button, .Size-option9 button{
+  width: 25px;    height: 25px;
+  margin: 0 5px;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+.image-option1, .image-option2, .image-option3, .image-option4, .image-option5, .image-option6, .image-option7, .image-option8, .image-option {
+  display: flex;
+  margin: 5px 0 5px 30px;
+}
+.image-option1 button, .image-option2 button, .image-option3 button, .image-option4 button, .image-option5 button, .image-option6 button, .image-option7 button, .image-option8 button, .image-option9 button{
+  width: 75px;    height: 75px;
+  margin: 0 5px;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+.image-option1 button img, .image-option2 button img, .image-option3 button img, .image-option4 button img, .image-option5 button img, .image-option6 button img, .image-option7 button img, .image-option8 button img, .image-option9 button img{
+  width: 100%;    height: 100%;
+}
+
+
+
+
+
+
+
+
+section .Box1{
+  grid-area: Box1; 
+}
+section .Box2{
+  grid-area: Box2;
+}
+section .Box3{
+  grid-area: Box3;
+}
+section .Box4{
+  grid-area: Box4;
+}
+section .Box5{
+  grid-area: Box5;
+}
+section .Box6{
+  grid-area: Box6;
+}
+section .Box7{
+  grid-area: Box7;
+}
+section .Box8{
+  grid-area: Box8;
+}
+section .Box9{
+  grid-area: Box9;
+}
+section .Box10{
+  grid-area: Box10;
+}
+
+
+
+
+
+@media only screen and (max-width:768px) {
+  main {
+    width: 100%;    height: 250vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section {
+    width: 90%;   height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9,1fr);
+    grid-template-areas: 
+    'Box1'
+    'Box2' 
+    'Box3'
+    'Box4'
+    'Box5'
+    'Box6'
+    'Box7'
+    'Box8'
+    'Box9';
+  }
+  .Box1, .Box2, .Box3, .Box4, .Box5, .Box6, .Box7, .Box8, .Box9, .Box10 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+    /* transition: .5s ease; */
+    border: 5px solid #000222;
+    border-radius: 25px;
+  }
+  .Box1-Instraction,  .Box2-Instraction,  .Box3-Instraction,  .Box4-Instraction,  .Box5-Instraction,  .Box6-Instraction,  .Box7-Instraction,  
+  .Box8-Instraction,  .Box9-Instraction{
+  position: absolute;
+  top: 10%;   right: 10%;
+  color: #000;
+  opacity: 1;
+  transition: 1s ease;
+}
+  .Box1-image, .Box2-image, .Box3-image, .Box4-image, .Box5-image, .Box6-image, .Box7-image, .Box8-image, .Box9-image, .Box10-image{
+  width: 100%;   height: 100%;
+  background-color: aliceblue;
+  display: block;
+}
+  .Box1-detail, .Box2-detail, .Box3-detail, .Box4-detail, .Box5-detail, .Box6-detail, .Box7-detail, .Box8-detail, .Box9-detail, .Box10-detail{
+  width: 100%;   height: 100%;
+}
+  .image-option1 button, .image-option2 button, .image-option3 button, .image-option4 button, .image-option5 button, .image-option6 button, .image-option7 button, .image-option8 button, .image-option9 button{
+  width: 50px;    height: 50px;
+  margin: 0 5px;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+.Size-option1 button, .Size-option2 button, .Size-option3 button, .Size-option4 button, .Size-option5 button, .Size-option6 button, .Size-option7 button, .Size-option8 button, .Size-option9 button{
+  width: 25px;    height: 25px;
+  margin: 0 5px;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+}
+@media only screen and (max-width:375px)  {
+  .image-option1 button, .image-option2 button, .image-option3 button, .image-option4 button, .image-option5 button, .image-option6 button, .image-option7 button, .image-option8 button, .image-option9 button{
+    width: 25px;    height: 25px;
+    margin: 0 5px;
+    border: 1px solid #000000;
+    font-weight: bold;
+  }
+  .Size-option1,  .Size-option2, .Size-option3, .Size-option4, .Size-option5, .Size-option6, .Size-option7, .Size-option8, .Size-option9  {
+    display: flex;
+    margin: 0px 0 0px 0px;
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>NEAT PAGE</title>
+  <link rel="stylesheet" href="../assets/css/neat.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head >
+<body style="background-color: #000222;">
+  <header id="header">
+    <span class="open-btn"><a onclick="Open()">&#9776; </a></span>
+    <span class="logo">
+     <a href="../index.html">
+          <h1>KK CO.</h1>
+     </a>
+</span>
+
+    <div class="search">
+      <div class="search-box">
+        <input type="text" class="input">
+        <div class="search-btn"><i class="fas fa-search"></i></div>
+
+      </div>
+    </div>
+  </header>
+  <aside id="NavBar">
+    <nav>
+      <a class="close-btn" onclick="Close()">&times;</a>
+      <a href="./about.html">About</a>
+      <a href="./neat.html">Neat</a>
+      <a href="./contact.html">Contact</a>        
+      <h3>All Rigths Reserve Kazuki</h3>
+    </nav>
+    <section class="social-box">
+        <button class="facebook"><i class="fab fa-facebook-square" style="font-size: 36px; color: #ffffff;" ></i></button>
+        <button class="teitter"><i class="fab fa-twitter-square" style="font-size: 36px; color: #ffffff;"></i></button>
+        <button class="google"><i class="fab fa-google-plus-square" style="font-size: 36px; color: #ffffff;"></i></button>
+    </section>
+  </aside>
+  <main id="main">
+    <section class="animate-wrapper">   
+      <article class="slides active" style="background-image: url('../assets/images/advertizement/suits.jpg');">
+        <div class="container">
+            <div class="caption">
+                <h2>1. Suits Collection</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="./p_suits.html">read more</a>
+            </div>
+        </div>
+      </article>
+      <article class="slides active" style="background-image: url('../assets/images/advertizement/shirt.jpg');">
+        <div class="container">
+            <div class="caption-R">
+                <h2>2. Shirts Collection</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="./p_shirts.html">read more</a>
+            </div>
+        </div>
+      </article>
+      <article class="slides active" style="background-image: url('../assets/images/advertizement/tie.jpg');">
+        <div class="container">
+            <div class="caption-R">
+                <h2>3. Ties Collection</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="./p_tie.html">read more</a>
+            </div>
+        </div>
+      </article>
+      <article class="slides active" style="background-image: url('../assets/images/advertizement/shoes.jpg');">
+        <div class="container">
+            <div class="caption">
+                <h2>4. Shoes Collection</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <a href="./p_shoes.html">read more</a>
+            </div>
+        </div>
+      </article>
+      <a class="prev" onclick="PlusSlide(-1)">	&#10096;</a>
+      <a class="next" onclick="PlusSlide(1)">	&#10097;</a>
+    </section>
+  </main>
+  <script src="../assets/js/neat.js"></script>
+</body>
+</html>
