@@ -149,6 +149,7 @@ aside nav a {
   opacity: .3;
   overflow: hidden;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 @-webkit-keyframes shine {
@@ -300,6 +301,9 @@ main .discription {
 }
 .S-btn, .D-btn ,.S-btn2, .D-btn2{
   font-size: 16px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
 }
 .Nlist,.Nlist2 {
   width: 100%; 
